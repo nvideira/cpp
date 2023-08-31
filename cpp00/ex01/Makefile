@@ -6,7 +6,7 @@
 #    By: nvideira <nvideira@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/29 17:58:56 by nvideira          #+#    #+#              #
-#    Updated: 2023/08/29 17:59:49 by nvideira         ###   ########.fr        #
+#    Updated: 2023/08/30 19:24:20 by nvideira         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,9 +16,9 @@ CXXFLAGS 	= -Wall -Wextra -Werror -std=c++98
 
 RM			= rm -f
 
-NAME		= megaphone
+NAME		= phonebook
 
-SRCS		= megaphone.cpp
+SRCS		= phonebook.cpp
 
 OBJS		= $(SRCS:.cpp=.o)
 
