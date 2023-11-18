@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nvideira <nvideira@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ubuntu <ubuntu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 18:18:02 by nvideira          #+#    #+#             */
-/*   Updated: 2023/08/31 00:27:35 by nvideira         ###   ########.fr       */
+/*   Updated: 2023/10/24 19:32:59 by ubuntu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,11 @@ class Contact{
 	public:
 		Contact();
 		~Contact();
+		void	set_fn();
+		void	set_ln();
+		void	set_nn();
+		void	set_pn();
+		void	set_ds();
 };
 
 #endif
