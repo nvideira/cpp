@@ -6,7 +6,7 @@
 /*   By: ubuntu <ubuntu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 18:18:02 by nvideira          #+#    #+#             */
-/*   Updated: 2023/10/24 19:32:59 by ubuntu           ###   ########.fr       */
+/*   Updated: 2024/01/05 02:39:06 by ubuntu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,13 @@ class Contact{
 		std::string	_drksecret;
 		
 	public:
-		Contact();
-		~Contact();
+		Contact(void);
+		~Contact(void);
+		void	get_fn();
+		void	get_ln();
+		void	get_nn();
+		void	get_pn();
+		void	get_ds();
 		void	set_fn();
 		void	set_ln();
 		void	set_nn();

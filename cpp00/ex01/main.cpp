@@ -6,7 +6,7 @@
 /*   By: ubuntu <ubuntu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 23:20:47 by nvideira          #+#    #+#             */
-/*   Updated: 2023/10/24 19:33:16 by ubuntu           ###   ########.fr       */
+/*   Updated: 2024/01/06 02:06:28 by ubuntu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ int	main(void)
 		std::cout << "Phonebook opened." << std::endl;
 		std::cout << "Please enter a command: ADD, SEARCH or EXIT" << std::endl;
 		std::getline(std::cin, input);
+		input = ft_toupper(input);
 		if (input == "ADD")
 		{
 			add_contact();
