@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contact.hpp                                        :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ubuntu <ubuntu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 18:18:02 by nvideira          #+#    #+#             */
-/*   Updated: 2024/01/05 02:39:06 by ubuntu           ###   ########.fr       */
+/*   Updated: 2024/01/14 07:10:18 by ubuntu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ class Contact{
 	public:
 		Contact(void);
 		~Contact(void);
+		void	add_contact(void);
 		void	get_fn();
 		void	get_ln();
 		void	get_nn();

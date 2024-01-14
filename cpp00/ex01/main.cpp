@@ -6,28 +6,11 @@
 /*   By: ubuntu <ubuntu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 23:20:47 by nvideira          #+#    #+#             */
-/*   Updated: 2024/01/06 02:06:28 by ubuntu           ###   ########.fr       */
+/*   Updated: 2024/01/14 07:13:22 by ubuntu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "phonebook.hpp"
-
-void	add_contact(void)
-{
-	Contact new_contact;
-	std::string input;
-	std::cout << "Enter the contact's first name: " << std::endl;
-	std::getline(std::cin, input);
-	//new_contact._firstName = input;
-	std::cout << "Enter the contact's last name: " << std::endl;
-	std::getline(std::cin, input);
-	std::cout << "Enter the contact's nickname: " << std::endl;
-	std::getline(std::cin, input);
-	std::cout << "Enter the contact's phone number: " << std::endl;
-	std::getline(std::cin, input);
-	std::cout << "Enter the contact's darkest secret: " << std::endl;
-	std::getline(std::cin, input);
-}
+#include "main.hpp"
 
 void	search(void)
 {
@@ -37,15 +20,17 @@ void	search(void)
 int	main(void)
 {
 	std::string input;
+	int i = 0;
+	PhoneBook book;
+	std::cout << "Phonebook opened." << std::endl;
 	while (1)
 	{
-		std::cout << "Phonebook opened." << std::endl;
 		std::cout << "Please enter a command: ADD, SEARCH or EXIT" << std::endl;
 		std::getline(std::cin, input);
 		input = ft_toupper(input);
 		if (input == "ADD")
 		{
-			add_contact();
+			book._contacts[i % 8].add_contact();
 		}
 		else if (input == "SEARCH")
 		{
