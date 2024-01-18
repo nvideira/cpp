@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: nvideira <nvideira@student.42.fr>          +#+  +:+       +#+         #
+#    By: ubuntu <ubuntu@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/29 17:58:56 by nvideira          #+#    #+#              #
-#    Updated: 2023/08/30 19:24:20 by nvideira         ###   ########.fr        #
+#    Updated: 2024/01/18 03:26:25 by ubuntu           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,17 +18,20 @@ RM			= rm -f
 
 NAME		= phonebook
 
-SRCS		= phonebook.cpp
+INCLUDE 	= -I ./
+
+SRCS		= PhoneBook.cpp main.cpp Contact.cpp utils.cpp
 
 OBJS		= $(SRCS:.cpp=.o)
 
 all:		$(NAME)
 
 $(NAME):	$(OBJS)
-			$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
-
+			$(CXX) $(CXXFLAGS) $(SRCS) $(INCLUDE) -c
+			$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME) $(INCLUDE)
+			
 clean:
-			$(RM) $(OBJS)
+			$(RM) -r $(OBJS)
 
 fclean:		clean
 			$(RM) $(NAME)

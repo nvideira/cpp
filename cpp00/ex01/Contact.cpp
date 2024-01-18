@@ -6,7 +6,7 @@
 /*   By: ubuntu <ubuntu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 00:13:06 by nvideira          #+#    #+#             */
-/*   Updated: 2024/01/17 04:41:46 by ubuntu           ###   ########.fr       */
+/*   Updated: 2024/01/18 02:36:08 by ubuntu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 Contact::Contact(void)
 {
 	std::cout << "Constructor called" << std::endl;
+	_is_empty = 0;
 	return ;
 }
 
@@ -22,6 +23,11 @@ Contact::~Contact(void)
 {
 	std::cout << "Destructor called" << std::endl;
 	return ;
+}
+
+int		Contact::status(void)
+{
+	return (_is_empty);
 }
 
 std::string Contact::get_param(int i)
@@ -72,4 +78,5 @@ void	Contact::add_contact(void)
 		return ;
 	while (!_drksecret.length())
 		std::getline(std::cin, _drksecret);
+	_is_empty = 1;
 }

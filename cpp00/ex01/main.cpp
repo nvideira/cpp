@@ -6,7 +6,7 @@
 /*   By: ubuntu <ubuntu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 23:20:47 by nvideira          #+#    #+#             */
-/*   Updated: 2024/01/14 07:13:22 by ubuntu           ###   ########.fr       */
+/*   Updated: 2024/01/18 03:37:01 by ubuntu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,11 @@ int	main(void)
 		if (input == "ADD")
 		{
 			book._contacts[i % 8].add_contact();
+			i++;
 		}
 		else if (input == "SEARCH")
 		{
-			search();
+			book.search();
 		}
 		else if (input == "EXIT")
 		{
