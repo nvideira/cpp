@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ubuntu <ubuntu@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/01/18 15:19:38 by ubuntu            #+#    #+#              #
-#    Updated: 2024/01/18 15:42:40 by ubuntu           ###   ########.fr        #
+#    Created: 2024/01/18 15:59:39 by ubuntu            #+#    #+#              #
+#    Updated: 2024/01/18 18:09:18 by ubuntu           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,11 +16,11 @@ CXXFLAGS 	= -Wall -Wextra -Werror -std=c++98 -g -fsanitize=address
 
 RM			= rm -f
 
-NAME		= hordes
+NAME		= war
 
 INCLUDE 	= -I ./
 
-SRCS		= zombieHorde.cpp main.cpp Zombie.cpp
+SRCS		= main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 
 OBJS		= $(SRCS:.cpp=.o)
 
