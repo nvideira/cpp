@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ubuntu <ubuntu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/19 10:09:20 by ubuntu            #+#    #+#             */
-/*   Updated: 2024/01/19 10:42:33 by ubuntu           ###   ########.fr       */
+/*   Created: 2024/01/19 09:23:42 by ubuntu            #+#    #+#             */
+/*   Updated: 2024/01/19 09:52:31 by ubuntu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_HPP
-# define BRAIN_HPP
+#ifndef WRONGANIMAL_HPP
+# define WRONGANIMAL_HPP
 
 # include <iostream>
 
-class Brain
+class WrongAnimal
 {
-  private:
+  protected:
+	std::string		_type;
   public:
-	std::string			_ideas[100];
-	Brain(void);
-	Brain(Brain const &copy);
-	Brain				&operator=(Brain const &copy);
-	std::string			identify(void) const;
-	~Brain(void);
+	WrongAnimal(void);
+	virtual				~WrongAnimal(void);
+	WrongAnimal(WrongAnimal const &copy);
+	WrongAnimal			&operator=(WrongAnimal const &copy);
+	void				makeSound(void) const;
+	std::string			getType(void) const;
 };
 
 #endif

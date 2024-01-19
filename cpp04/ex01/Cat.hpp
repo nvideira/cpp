@@ -6,7 +6,7 @@
 /*   By: ubuntu <ubuntu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 07:49:32 by ubuntu            #+#    #+#             */
-/*   Updated: 2024/01/19 10:13:12 by ubuntu           ###   ########.fr       */
+/*   Updated: 2024/01/19 10:44:08 by ubuntu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ class Cat : public Animal
 		Cat						&operator=(Cat const &copy);
 		virtual void			makeSound(void) const;
 		virtual std::string		getType(void) const;
+		std::string&			getBrainIdea(int i) const;
+		void					setBrainIdea(int i, std::string const &idea);
 		virtual					~Cat(void);
 };
 

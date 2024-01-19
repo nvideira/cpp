@@ -6,7 +6,7 @@
 /*   By: ubuntu <ubuntu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 10:09:20 by ubuntu            #+#    #+#             */
-/*   Updated: 2024/01/19 10:42:33 by ubuntu           ###   ########.fr       */
+/*   Updated: 2024/01/19 10:49:37 by ubuntu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,9 @@
 class Brain
 {
   private:
+  
   public:
-	std::string			_ideas[100];
+	std::string		_ideas[100];
 	Brain(void);
 	Brain(Brain const &copy);
 	Brain				&operator=(Brain const &copy);

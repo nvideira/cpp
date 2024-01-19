@@ -1,62 +1,62 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ubuntu <ubuntu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/19 07:49:56 by ubuntu            #+#    #+#             */
-/*   Updated: 2024/01/19 10:44:31 by ubuntu           ###   ########.fr       */
+/*   Created: 2024/01/19 07:48:50 by ubuntu            #+#    #+#             */
+/*   Updated: 2024/01/19 10:48:50 by ubuntu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "Dog.hpp"
 
-Cat::Cat(void) : Animal()
+Dog::Dog(void)
 {
-	std::cout << "Cat default constructor called" << std::endl;
-	_type = "Cat";
+	std::cout << "Dog default constructor called" << std::endl;
+	this->_type = "Dog";
 	this->_brain = new Brain();
 }
 
-Cat::~Cat(void)
+Dog::~Dog(void)
 {
 	delete this->_brain;
-	std::cout << "Cat destructor called" << std::endl;
+	std::cout << "Dog destructor called" << std::endl;
 	return ;
 }
 
-Cat::Cat(Cat const &copy) : Animal(copy)
+Dog::Dog(Dog const &copy) : Animal(copy)
 {
 	this->_type = copy._type;
-	std::cout << "Cat copy constructor called" << std::endl;
+	std::cout << "Dog copy constructor called" << std::endl;
 	return ;
 }
 
-Cat	&Cat::operator=(Cat const &assign)
+Dog	&Dog::operator=(Dog const &assign)
 {
 	if (this != &assign)
 		this->_type = assign._type;
-	std::cout << "Cat assignment operator called" << std::endl;
+	std::cout << "Dog assignment operator called" << std::endl;
 	return (*this);
 }
 
-void	Cat::makeSound(void) const
+void	Dog::makeSound(void) const
 {
-	std::cout << "Mew" << std::endl;
+	std::cout << "woof" << std::endl;
 	return ;
 }
 
-std::string	Cat::getType(void) const
+std::string	Dog::getType(void) const
 {
 	return (this->_type);
 }
 
-std::string&	Cat::getBrainIdea(int index) const
+std::string&	Dog::getBrainIdea(int index) const
 {
 	return (this->_brain->_ideas[index]);
 }
 
-void			Cat::setBrainIdea(int index, std::string const& new_idea) {
+void	Dog::setBrainIdea(int index, const std::string &new_idea) {
 	this->_brain->_ideas[index] = new_idea;
 }

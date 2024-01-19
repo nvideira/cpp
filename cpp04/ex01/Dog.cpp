@@ -6,11 +6,12 @@
 /*   By: ubuntu <ubuntu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 07:48:50 by ubuntu            #+#    #+#             */
-/*   Updated: 2024/01/19 10:23:38 by ubuntu           ###   ########.fr       */
+/*   Updated: 2024/01/19 10:47:06 by ubuntu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
+#include "Brain.hpp"
 
 Dog::Dog(void)
 {
@@ -50,4 +51,13 @@ void	Dog::makeSound(void) const
 std::string	Dog::getType(void) const
 {
 	return (this->_type);
+}
+
+std::string&	Dog::getBrainIdea(int index) const
+{
+	return (this->_brain->_ideas[index]);
+}
+
+void	Dog::setBrainIdea(int index, const std::string &new_idea) {
+	this->_brain->_ideas[index] = new_idea;
 }

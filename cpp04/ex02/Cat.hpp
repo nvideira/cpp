@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ubuntu <ubuntu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/19 07:49:00 by ubuntu            #+#    #+#             */
-/*   Updated: 2024/01/19 10:47:15 by ubuntu           ###   ########.fr       */
+/*   Created: 2024/01/19 07:49:32 by ubuntu            #+#    #+#             */
+/*   Updated: 2024/01/19 10:48:33 by ubuntu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
+#ifndef CAT_HPP
+# define CAT_HPP
 
 # include "Animal.hpp"
 # include "Brain.hpp"
 
-class Dog : public Animal
+class Cat : public Animal
 {
 	private:
 		std::string		_type;
 		Brain			*_brain;
 	public:
-		Dog(void);
-		Dog(Dog const &copy);
-		Dog						&operator=(Dog const &copy);
+		Cat(void);
+		Cat(Cat const &copy);
+		Cat						&operator=(Cat const &copy);
 		virtual void			makeSound(void) const;
 		virtual std::string		getType(void) const;
 		std::string&			getBrainIdea(int i) const;
-		void					setBrainIdea(int i, const std::string& idea);
-		virtual					~Dog(void);
+		void					setBrainIdea(int i, std::string const &idea);
+		virtual					~Cat(void);
 };
 
 #endif
