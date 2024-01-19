@@ -6,7 +6,7 @@
 #    By: ubuntu <ubuntu@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/19 05:43:52 by ubuntu            #+#    #+#              #
-#    Updated: 2024/01/19 06:52:55 by ubuntu           ###   ########.fr        #
+#    Updated: 2024/01/19 06:53:03 by ubuntu           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ NAME		= clapped
 
 INCLUDE 	= -I ./
 
-SRCS		= main.cpp ClapTrap.cpp ScavTrap.cpp
+SRCS		= main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 
 OBJS		= $(SRCS:.cpp=.o)
 
