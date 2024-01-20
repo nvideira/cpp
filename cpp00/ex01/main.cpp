@@ -6,16 +6,12 @@
 /*   By: ubuntu <ubuntu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 23:20:47 by nvideira          #+#    #+#             */
-/*   Updated: 2024/01/18 03:37:01 by ubuntu           ###   ########.fr       */
+/*   Updated: 2024/01/20 15:49:06 by ubuntu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.hpp"
-
-void	search(void)
-{
-	
-}
+# include "PhoneBook.hpp"
 
 int	main(void)
 {

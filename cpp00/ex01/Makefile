@@ -6,13 +6,13 @@
 #    By: ubuntu <ubuntu@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/29 17:58:56 by nvideira          #+#    #+#              #
-#    Updated: 2024/01/18 03:26:25 by ubuntu           ###   ########.fr        #
+#    Updated: 2024/01/20 15:25:19 by ubuntu           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CXX			= c++
 
-CXXFLAGS 	= -Wall -Wextra -Werror -std=c++98
+CXXFLAGS 	= -Wall -Wextra -Werror -std=c++98 -g -fsanitize=address
 
 RM			= rm -f
 

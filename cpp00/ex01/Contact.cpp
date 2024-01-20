@@ -6,11 +6,12 @@
 /*   By: ubuntu <ubuntu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 00:13:06 by nvideira          #+#    #+#             */
-/*   Updated: 2024/01/18 02:36:08 by ubuntu           ###   ########.fr       */
+/*   Updated: 2024/01/20 15:41:27 by ubuntu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
+#include "main.hpp"
 
 Contact::Contact(void)
 {
@@ -49,34 +50,44 @@ std::string Contact::get_param(int i)
 void	Contact::add_contact(void)
 {
 	std::cout << "Enter the contact's first name: " << std::endl;
-	std::getline(std::cin, _firstName);
+	std::getline(std::cin >> std::ws, _firstName);
 	if (!std::cin)
 		return ;
 	while (!_firstName.length())
 		std::getline(std::cin, _firstName);
+	_firstName = trim(_firstName, " \t\n\r\f\v");
 	std::cout << "Enter the contact's last name: " << std::endl;
-	std::getline(std::cin, _lastName);
+	std::getline(std::cin >> std::ws, _lastName);
 	if (!std::cin)
 		return ;
 	while (!_lastName.length())
 		std::getline(std::cin, _lastName);
+	_lastName = trim(_lastName, " \t\n\r\f\v");
 	std::cout << "Enter the contact's nickname: " << std::endl;
-	std::getline(std::cin, _nickname);
+	std::getline(std::cin >> std::ws, _nickname);
 	if (!std::cin)
 		return ;
 	while (!_nickname.length())
-		std::getline(std::cin, _nickname);
+		std::getline(std::cin >> std::ws, _nickname);
+	_nickname = trim(_nickname, " \t\n\r\f\v");
 	std::cout << "Enter the contact's phone number: " << std::endl;
-	std::getline(std::cin, _phonenumber);
+	std::getline(std::cin >> std::ws, _phonenumber);
 	if (!std::cin)
 		return ;
-	while (!_phonenumber.length())
-		std::getline(std::cin, _phonenumber);
+	if (_phonenumber.find_first_not_of("0123456789") != std::string::npos)
+		std::cout << "Invalid phone number" << std::endl;
+	while (!_phonenumber.length() || _phonenumber.find_first_not_of("0123456789") != std::string::npos)
+	{
+		std::getline(std::cin >> std::ws, _phonenumber);
+		if (_phonenumber.find_first_not_of("0123456789") != std::string::npos)
+			std::cout << "Invalid phone number" << std::endl;
+	}
+	_phonenumber = trim(_phonenumber, " \t\n\r\f\v");
 	std::cout << "Enter the contact's darkest secret: " << std::endl;
-	std::getline(std::cin, _drksecret);
+	std::getline(std::cin >> std::ws, _drksecret);
 	if (!std::cin)
 		return ;
 	while (!_drksecret.length())
-		std::getline(std::cin, _drksecret);
+		std::getline(std::cin >> std::ws, _drksecret);
 	_is_empty = 1;
 }
