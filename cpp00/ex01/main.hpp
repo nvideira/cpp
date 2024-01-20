@@ -12,6 +12,7 @@
 
 #ifndef MAIN_HPP
 # define MAIN_HPP
+# include <string>
 
 std::string	ft_toupper(std::string str);
 
