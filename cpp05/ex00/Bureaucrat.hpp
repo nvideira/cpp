@@ -6,7 +6,7 @@
 /*   By: nvideira <nvideira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 23:32:03 by nvideira          #+#    #+#             */
-/*   Updated: 2024/03/06 05:31:03 by nvideira         ###   ########.fr       */
+/*   Updated: 2024/03/07 08:53:36 by nvideira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,6 @@ class Bureaucrat {
         };
 };
 
-std::ostream& operator<<(std::ostream& os, Bureaucrat &dude);
+std::ostream &operator<<(std::ostream& os, Bureaucrat const &dude);
 
 #endif

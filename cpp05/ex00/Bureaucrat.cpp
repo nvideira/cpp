@@ -6,7 +6,7 @@
 /*   By: nvideira <nvideira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 23:41:30 by nvideira          #+#    #+#             */
-/*   Updated: 2024/03/06 05:26:29 by nvideira         ###   ########.fr       */
+/*   Updated: 2024/03/07 08:52:13 by nvideira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,7 @@ void   Bureaucrat::decrementGrade(int amount)
     }
 }
 
-std::ostream& operator<<(std::ostream& os, Bureaucrat const& dude)
+std::ostream &operator<<(std::ostream& os, Bureaucrat const& dude)
 {
     std::cout << "Hello. I'm " << dude.getName() << " and I'm a bureaucrat. My grade is " << dude.getGrade() << std::endl;
     return (os);
