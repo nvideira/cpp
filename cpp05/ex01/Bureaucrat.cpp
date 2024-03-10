@@ -6,7 +6,7 @@
 /*   By: nvideira <nvideira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 23:41:30 by nvideira          #+#    #+#             */
-/*   Updated: 2024/02/22 04:12:31 by nvideira         ###   ########.fr       */
+/*   Updated: 2024/03/07 11:51:56 by nvideira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,4 +97,22 @@ void   Bureaucrat::decrementGrade(int amount)
     {
         std::cout << "Error: " << e << std::endl;
     }
+}
+
+void    Bureaucrat::signForm(Form &tbs)
+{
+    try
+    {
+        tbs.beSigned(*this);
+    }
+    catch (std::exception &e)
+    {
+        std::cout << this->_name << " cannot sign " << tbs.getName() << " because " << e.what() << std::endl;
+    }
+}
+
+std::ostream &operator<<(std::ostream& os, Bureaucrat const& dude)
+{
+    os << "Hello. I'm " << dude.getName() << " and I'm a bureaucrat. My grade is " << dude.getGrade() << std::endl;
+    return (os);
 }
