@@ -6,7 +6,7 @@
 /*   By: nvideira <nvideira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 23:41:30 by nvideira          #+#    #+#             */
-/*   Updated: 2024/03/07 13:24:24 by nvideira         ###   ########.fr       */
+/*   Updated: 2024/03/17 19:03:25 by nvideira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,19 +20,6 @@ Bureaucrat::Bureaucrat(std::string const name, int grade) : _name(name)
         throw GradeTooLowException();
     else
         this->_grade = grade;
-    // try 
-    // {
-    //     if (grade < 1)
-    //         throw GradeTooHighException();
-    //     else if (grade > 150)
-    //         throw GradeTooLowException();
-    //     else
-    //         this->_grade = grade;
-    // }
-    // catch (std::exception &e)
-    // {
-    //     std::cout << "Error: " << "Grade must be between 1 and 150." << std::endl;
-    // }
     std::cout << "Default constructor called for " << this->_name << std::endl;
 }
 

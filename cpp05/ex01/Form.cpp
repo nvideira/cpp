@@ -6,7 +6,7 @@
 /*   By: nvideira <nvideira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 04:35:07 by nvideira          #+#    #+#             */
-/*   Updated: 2024/03/07 11:45:02 by nvideira         ###   ########.fr       */
+/*   Updated: 2024/03/18 00:33:05 by nvideira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,18 +54,23 @@ bool Form::getSigned() const
     return this->_signed;
 }
 
-int const Form::getSignGrade() const
+int Form::getSignGrade() const
 {
     return this->_sign_grade;
 }
 
-int const Form::getExecGrade() const
+int Form::getExecGrade() const
 {
     return this->_exec_grade;
 }
 
-void Form::beSigned(Bureaucrat guy)
+void Form::beSigned(Bureaucrat &guy)
 {
+    if (this->_signed)
+    {
+        throw ("Form is already signed");
+        return ;
+    }
     if (guy.getGrade() >= this->_sign_grade)
     {
         this->_signed = true;

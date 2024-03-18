@@ -6,7 +6,7 @@
 /*   By: nvideira <nvideira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 23:32:03 by nvideira          #+#    #+#             */
-/*   Updated: 2024/03/07 10:13:49 by nvideira         ###   ########.fr       */
+/*   Updated: 2024/03/17 22:17:38 by nvideira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define BUREAUCRAT_HPP
 
 # include <iostream>
-# include <exception>
 # include "Form.hpp"
 
 class Bureaucrat {
