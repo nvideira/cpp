@@ -6,13 +6,12 @@
 /*   By: nvideira <nvideira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 23:41:30 by nvideira          #+#    #+#             */
-/*   Updated: 2024/03/17 22:09:27 by nvideira         ###   ########.fr       */
+/*   Updated: 2024/03/22 02:57:22 by nvideira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-
-#include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 Bureaucrat::Bureaucrat(std::string const name, int grade) : _name(name)
 {

@@ -6,7 +6,7 @@
 /*   By: nvideira <nvideira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 04:34:59 by nvideira          #+#    #+#             */
-/*   Updated: 2024/03/17 22:16:58 by nvideira         ###   ########.fr       */
+/*   Updated: 2024/03/22 02:16:43 by nvideira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 # define FORM_HPP
 
 # include <iostream>
-# include "Bureaucrat.hpp"
+//# include "Bureaucrat.hpp"
+
+class Bureaucrat;
 
 class Form {
     private:

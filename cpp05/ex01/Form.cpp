@@ -6,11 +6,12 @@
 /*   By: nvideira <nvideira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 04:35:07 by nvideira          #+#    #+#             */
-/*   Updated: 2024/03/18 00:33:05 by nvideira         ###   ########.fr       */
+/*   Updated: 2024/03/22 03:11:58 by nvideira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
+#include "Bureaucrat.hpp"
 
 Form::Form(std::string const &name, int const sign_grade, int const exec_grade) : _name(name), _sign_grade(sign_grade), _exec_grade(exec_grade)
 {
@@ -68,27 +69,18 @@ void Form::beSigned(Bureaucrat &guy)
 {
     if (this->_signed)
     {
-        throw ("Form is already signed");
+        std::cout << "Form is already signed" << std::endl;
         return ;
     }
-    if (guy.getGrade() >= this->_sign_grade)
+    if (guy.getGrade() <= this->_sign_grade)
     {
         this->_signed = true;
+        std::cout << guy.getName() << " signs " << this->_name << std::endl;
     }
     else
     {
         throw Form::GradeTooLowException();
     }
-}
-
-Form::GradeTooHighException::GradeTooHighException()
-{
-    std::cout << "Grade too high" << std::endl;
-}
-
-Form::GradeTooLowException::GradeTooLowException()
-{
-    std::cout << "Grade too low" << std::endl;
 }
 
 const char* Form::GradeTooHighException::what() const throw()
@@ -108,7 +100,7 @@ std::ostream &operator<<(std::ostream& os, Form const &paper)
         os << "signed";
     else
         os << "not signed";
-    os << " and requires a grade " << paper.getSignGrade() << " to be signed and a grade " << paper.getExecGrade() << " to be executed";
+    os << " and requires a grade " << paper.getSignGrade() << " to be signed and a grade " << paper.getExecGrade() << " to be executed.\n";
     return os;
 }
 
